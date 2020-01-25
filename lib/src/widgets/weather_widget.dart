@@ -49,8 +49,23 @@ class _WeatherWidgetState extends State<WeatherWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text('Cuba Weather'),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        leading: Icon(Icons.menu),
+        //centerTitle: true,
+        title: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Image.asset(
+                    'images/logo.png',
+                    fit: BoxFit.cover,
+                    height: 35.0,
+                  ),
+                  Text('Cuba Weather', textAlign: TextAlign.center,)
+                ],
+              ),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),
